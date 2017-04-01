@@ -4,7 +4,7 @@ special, but I decided to upload it because no one else has made a C# API on the
 <br>
 <h1>Current project status is...</h1>
 <h3>Closed</h3>
-<p>Like all my projects this application is open to pull requests, however I have decided to dis-continue it on my end.</p>
+<p>Like all my projects this application is open to pull requests, however I have decided to discontinue it on my end.</p>
 <br>
 <h1>Licensing</h1>
 <h3>MIT License</h3>
