@@ -5,14 +5,9 @@ namespace AIPDBAPI
 {
     public class AIPDB
     {
-
-        private string API_KEY = string.Empty;
-
-        // Run On Instance Creation
-        public AIPDB(string APIKey) {
-            API_KEY = APIKey;
-        }
-
+        /// <summary>
+        /// Much nicer categorizing of the things you can report for!
+        /// </summary>
         public enum Categories
         {
             Fraud_Orders = 3,
@@ -29,7 +24,13 @@ namespace AIPDBAPI
             IoT_Targeted = 23
         };
 
-        public bool CheckIP(string IP)
+        /// <summary>
+        /// Returns true if IP has beeen reported before or false if it hasen't!
+        /// </summary>
+        /// <param name="API_KEY">API Key From AIPDB.com</param>
+        /// <param name="IP">IP To Check</param>
+        /// <returns></returns>
+        public bool CheckIP(string API_KEY, string IP)
         {
             // Make WEb Request
             HttpWebRequest HWR = (HttpWebRequest)WebRequest.Create(string.Format(
@@ -54,7 +55,15 @@ namespace AIPDBAPI
             }
         }
 
-        public bool ReportIP(string IP, string COMMENT, params Categories[] Categories)
+        /// <summary>
+        /// Reports IP for selected reasons.
+        /// </summary>
+        /// <param name="API_KEY">API Key From AIPDB.com</param>
+        /// <param name="IP">IP To Report</param>
+        /// <param name="COMMENT">Any other commments for why it's being reported.</param>
+        /// <param name="Categories">Categories to report for!</param>
+        /// <returns></returns>
+        public static bool ReportIP(string API_KEY, string IP, string COMMENT, params Categories[] Categories)
         {
             // Parse input
             string FINAL = string.Empty;
