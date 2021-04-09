@@ -10,7 +10,7 @@ special, but I decided to upload it because no one else has made a C# API on the
 <h3>MIT License</h3>
 
 ```
-Copyright (c) <N/A> <N/A>
+Copyright (c) Sean Mitchell <2020>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
